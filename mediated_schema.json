@@ -1,0 +1,356 @@
+{
+    "Unnamed: 0": [
+        "./extracted_files/wissel-aziende-info-clipper.com.csv",
+        "./extracted_files/DDD-teamblind.com.csv",
+        "./extracted_files/MalPatSaj-wikipedia.org.xls",
+        "./extracted_files/MalPatSaj-forbes.com.xls",
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "INDEX": [
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "URL": [
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv",
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "Name": [
+        "./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv",
+        "./extracted_files/wissel-aziende-info-clipper.com.csv",
+        "./extracted_files/MalPatSaj-wikipedia.org.xls",
+        "./extracted_files/MalPatSaj-forbes.com.xls",
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv",
+        "./extracted_files/wissel-partners-ariregister.rik.ee.csv",
+        "./extracted_files/AmbitionBox.csv"
+    ],
+    "Trade Name": [
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "Address Name": [
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "Postalcode": [
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "City": [
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "State": [
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "Country": [
+        "./extracted_files/MalPatSaj-forbes.com.xls",
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "Location type": [
+        "./extracted_files/wissel-aziende-info-clipper.com.csv"
+    ],
+    "name": [
+        "./extracted_files/output_govuk_bigsize.json",
+        "./extracted_files/hitHorizons_dataset.jsonl",
+        "./extracted_files/DDD-teamblind.com.csv",
+        "./extracted_files/ft.com.json",
+        "./extracted_files/DDD-cbinsight.com.csv",
+        "./extracted_files/disfold.com.json",
+        "./extracted_files/output_globaldata.json",
+        "./extracted_files/valueToday_dataset.jsonl",
+        "./extracted_files/companiesMarketCap_dataset.jsonl"
+    ],
+    "valuation": [
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "dateJoined": [
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "country": [
+        "./extracted_files/companiesMarketCap_dataset.jsonl",
+        "./extracted_files/ft.com.json",
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "city": [
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "industry": [
+        "./extracted_files/hitHorizons_dataset.jsonl",
+        "./extracted_files/DDD-teamblind.com.csv",
+        "./extracted_files/ft.com.json",
+        "./extracted_files/DDD-cbinsight.com.csv",
+        "./extracted_files/output_globaldata.json"
+    ],
+    "investors": [
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "founded": [
+        "./extracted_files/DDD-teamblind.com.csv",
+        "./extracted_files/ft.com.json",
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "stage": [
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "totalRaised": [
+        "./extracted_files/DDD-cbinsight.com.csv"
+    ],
+    "RANK": [
+        "./extracted_files/campaignindia.csv"
+    ],
+    "BRAND NAME": [
+        "./extracted_files/campaignindia.csv"
+    ],
+    "CATEGORY": [
+        "./extracted_files/campaignindia.csv"
+    ],
+    "MAIN MARKET": [
+        "./extracted_files/campaignindia.csv"
+    ],
+    "2010 RANK": [
+        "./extracted_files/campaignindia.csv"
+    ],
+    "headquarters": [
+        "./extracted_files/disfold.com.json",
+        "./extracted_files/output_globaldata.json"
+    ],
+    "number_of_employees": [
+        "./extracted_files/valueToday_dataset.jsonl",
+        "./extracted_files/output_globaldata.json"
+    ],
+    "address": [
+        "./extracted_files/hitHorizons_dataset.jsonl",
+        "./extracted_files/output_globaldata.json"
+    ],
+    "website": [
+        "./extracted_files/DDD-teamblind.com.csv",
+        "./extracted_files/output_globaldata.json"
+    ],
+    "market_cap": [
+        "./extracted_files/companiesMarketCap_dataset.jsonl",
+        "./extracted_files/disfold.com.json",
+        "./extracted_files/output_globaldata.json"
+    ],
+    "telephone": [
+        "./extracted_files/output_globaldata.json"
+    ],
+    "revenue": [
+        "./extracted_files/ft.com.json",
+        "./extracted_files/output_globaldata.json"
+    ],
+    "Industry": [
+        "./extracted_files/MalPatSaj-wikipedia.org.xls",
+        "./extracted_files/AmbitionBox.csv"
+    ],
+    "Sector": [
+        "./extracted_files/MalPatSaj-wikipedia.org.xls"
+    ],
+    "Headquarters": [
+        "./extracted_files/MalPatSaj-wikipedia.org.xls"
+    ],
+    "Founded": [
+        "./extracted_files/MalPatSaj-wikipedia.org.xls"
+    ],
+    "Notes": [
+        "./extracted_files/MalPatSaj-wikipedia.org.xls"
+    ],
+    "locations": [
+        "./extracted_files/DDD-teamblind.com.csv"
+    ],
+    "size": [
+        "./extracted_files/DDD-teamblind.com.csv"
+    ],
+    "ID azienda": [
+        "./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv",
+        "./extracted_files/wissel-activity-ariregister.rik.ee.csv",
+        "./extracted_files/wissel-partners-ariregister.rik.ee.csv"
+    ],
+    "Area of Activity": [
+        "./extracted_files/wissel-activity-ariregister.rik.ee.csv"
+    ],
+    "EMTAK Code": [
+        "./extracted_files/wissel-activity-ariregister.rik.ee.csv"
+    ],
+    "NACE Code": [
+        "./extracted_files/wissel-activity-ariregister.rik.ee.csv"
+    ],
+    "Source": [
+        "./extracted_files/wissel-activity-ariregister.rik.ee.csv"
+    ],
+    "id": [
+        "./extracted_files/valueToday_dataset.jsonl",
+        "./extracted_files/companiesMarketCap_dataset.jsonl",
+        "./extracted_files/hitHorizons_dataset.jsonl"
+    ],
+    "world_rank": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "annual_revenue_in_usd": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "annual_net_income_in_usd": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "annual_results_for_year_ending": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "total_assets_in_usd": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "total_liabilities_in_usd": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "total_equity_in_usd": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "headquarters_region_city": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "headquarters_country": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "headquarters_sub_region": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "headquarters_continent": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "company_business": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "ceo": [
+        "./extracted_files/valueToday_dataset.jsonl",
+        "./extracted_files/disfold.com.json"
+    ],
+    "founders": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "company_website": [
+        "./extracted_files/valueToday_dataset.jsonl"
+    ],
+    "company_number": [
+        "./extracted_files/output_govuk_bigsize.json"
+    ],
+    "registered_office_address": [
+        "./extracted_files/output_govuk_bigsize.json"
+    ],
+    "company_status": [
+        "./extracted_files/output_govuk_bigsize.json"
+    ],
+    "company_type": [
+        "./extracted_files/output_govuk_bigsize.json"
+    ],
+    "company_creation_date": [
+        "./extracted_files/output_govuk_bigsize.json"
+    ],
+    "nature_of_business": [
+        "./extracted_files/output_govuk_bigsize.json"
+    ],
+    "nation": [
+        "./extracted_files/hitHorizons_dataset.jsonl"
+    ],
+    "hhid": [
+        "./extracted_files/hitHorizons_dataset.jsonl"
+    ],
+    "sic_code": [
+        "./extracted_files/hitHorizons_dataset.jsonl"
+    ],
+    "type": [
+        "./extracted_files/hitHorizons_dataset.jsonl"
+    ],
+    "est_of_ownership": [
+        "./extracted_files/hitHorizons_dataset.jsonl"
+    ],
+    "link": [
+        "./extracted_files/disfold.com.json",
+        "./extracted_files/ft.com.json"
+    ],
+    "employees": [
+        "./extracted_files/disfold.com.json",
+        "./extracted_files/ft.com.json"
+    ],
+    "Sales": [
+        "./extracted_files/MalPatSaj-forbes.com.xls"
+    ],
+    "Profit": [
+        "./extracted_files/MalPatSaj-forbes.com.xls"
+    ],
+    "Assets": [
+        "./extracted_files/MalPatSaj-forbes.com.xls"
+    ],
+    "Market Value": [
+        "./extracted_files/MalPatSaj-forbes.com.xls"
+    ],
+    "Company": [
+        "./extracted_files/company_social_urls.csv"
+    ],
+    "Facebook": [
+        "./extracted_files/company_social_urls.csv"
+    ],
+    "Twitter": [
+        "./extracted_files/company_social_urls.csv"
+    ],
+    "Instagram": [
+        "./extracted_files/company_social_urls.csv"
+    ],
+    "Pinterest": [
+        "./extracted_files/company_social_urls.csv"
+    ],
+    "rank": [
+        "./extracted_files/companiesMarketCap_dataset.jsonl"
+    ],
+    "share_price": [
+        "./extracted_files/companiesMarketCap_dataset.jsonl"
+    ],
+    "change_1_day": [
+        "./extracted_files/companiesMarketCap_dataset.jsonl"
+    ],
+    "change_1_year": [
+        "./extracted_files/companiesMarketCap_dataset.jsonl"
+    ],
+    "categories": [
+        "./extracted_files/companiesMarketCap_dataset.jsonl"
+    ],
+    "ID": [
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv"
+    ],
+    "Code": [
+        "./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv",
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv",
+        "./extracted_files/wissel-partners-ariregister.rik.ee.csv"
+    ],
+    "Legal form": [
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv"
+    ],
+    "Status": [
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv"
+    ],
+    "Registration Date": [
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv"
+    ],
+    "Capital": [
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv"
+    ],
+    "Address": [
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv"
+    ],
+    "Deletion Date": [
+        "./extracted_files/wissel-aziende-ariregister.rik.ee.csv"
+    ],
+    "Participation": [
+        "./extracted_files/wissel-partners-ariregister.rik.ee.csv"
+    ],
+    "Contribution": [
+        "./extracted_files/wissel-partners-ariregister.rik.ee.csv"
+    ],
+    "Role": [
+        "./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv"
+    ],
+    "Start Date": [
+        "./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv"
+    ],
+    "Headquarter": [
+        "./extracted_files/AmbitionBox.csv"
+    ],
+    "Ownership": [
+        "./extracted_files/AmbitionBox.csv"
+    ],
+    "Foundation Year": [
+        "./extracted_files/AmbitionBox.csv"
+    ]
+}
