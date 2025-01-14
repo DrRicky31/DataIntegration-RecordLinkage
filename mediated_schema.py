@@ -29,7 +29,7 @@ def read_excel(file_path):
         return pd.read_excel(file_path, engine='openpyxl')
 
 # Funzione per creare uno schema mediato e salvarlo in un file Excel
-def create_mediated_schema(directory_path, output_file="mediated_schema.xlsx"):
+def create_mediated_schema(directory_path, output_file="mediated_schema.json"):
     schema = {}
 
     # Controllo se la directory esiste
@@ -58,9 +58,10 @@ def create_mediated_schema(directory_path, output_file="mediated_schema.xlsx"):
                     continue
 
                 for column in df.columns:
-                    if column not in schema:
-                        schema[column] = []
-                    schema[column].append(file_path)
+                    normalized_column = column.strip().lower()
+                    if normalized_column not in schema:
+                        schema[normalized_column] = []
+                    schema[normalized_column].append(file_path)
 
             except Exception as e:
                 print(f"Errore durante la lettura del file {file_path}: {e}")
@@ -68,8 +69,8 @@ def create_mediated_schema(directory_path, output_file="mediated_schema.xlsx"):
     # Converti lo schema in un DataFrame
     schema_df = pd.DataFrame([(key, ', '.join(value)) for key, value in schema.items()], columns=['Attributo', 'Provenienza'])
 
-    # Salva lo schema mediato in un file Excel
-    schema_df.to_excel(output_file, index=False)
+    # Salva lo schema mediato in un file Json
+    schema_df.to_json(output_file, index=False)
 
     print(f"Schema mediato salvato in {output_file}")
     return schema_df
@@ -77,5 +78,5 @@ def create_mediated_schema(directory_path, output_file="mediated_schema.xlsx"):
 # Funzione principale
 if __name__ == "__main__":
     directory_path = "./extracted_files"
-    output_file = "mediated_schema.xlsx"
+    output_file = "mediated_schema.json"
     create_mediated_schema(directory_path, output_file)
