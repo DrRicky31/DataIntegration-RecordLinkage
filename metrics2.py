@@ -23,16 +23,18 @@ model = dm.MatchingModel(attr_summarizer='hybrid')  # Usa l'architettura "ibrida
 model.run_train(
     train,
     validation,
-    epochs=1,  # Riduci il numero di epoche
-    batch_size=1,  # Batch size ottimizzato per l'utilizzo di RAM
+    epochs=5,  # Riduci il numero di epoche
+    batch_size=8,  # Batch size ottimizzato per l'utilizzo di RAM
     best_save_path='best_model.pth'  # Salva il modello migliore
 )
 
 # Valutazione del modello
 results = model.run_eval(test, batch_size=8)  # Valutazione con batch ridotto
 
-# Stampa delle metriche
+# Stampa dei risultati completi per esaminare il formato
+print("Risultati di valutazione:", results)
+
+# Stampa delle metriche (assumendo che i risultati siano in formato dizionario)
+# In caso di tensore, estrai il valore con .item()
 print("\nMetriche DeepMatcher:")
-print(f"Precision: {results['precision']:.2f}")
-print(f"Recall: {results['recall']:.2f}")
-print(f"F-measure: {results['f1']:.2f}")
+print(f"F1 Score: {results.item():.2f}")  # Se il risultato è un tensore
