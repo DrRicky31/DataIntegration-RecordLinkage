@@ -24,7 +24,7 @@ print("Calcolo completato.")
 
 # Clustering con DBSCAN basato su embedding
 print("Esecuzione del clustering con DBSCAN...")
-dbscan = DBSCAN(eps=0.3, min_samples=2, metric="cosine")
+dbscan = DBSCAN(eps=0.2, min_samples=1, metric="cosine")  # Ridotto eps a 0.1
 clusters = dbscan.fit_predict(embeddings)
 
 # Aggiungi i cluster come chiavi di blocco al DataFrame
@@ -49,8 +49,7 @@ def merge_records(group):
 
 print("Raggruppamento e fusione dei record all'interno dei cluster...")
 
-# La fusione dei cluster deve essere fatta senza rimuovere quelli con un singolo elemento
-# Evitiamo di rimuovere i cluster rumorosi (etichettati come -1)
+# Fusione dei cluster senza rimuovere quelli con un singolo elemento
 merged_df = df.groupby("cluster").apply(merge_records).reset_index(drop=True)
 
 # Mostra un'anteprima del dataset fuso
