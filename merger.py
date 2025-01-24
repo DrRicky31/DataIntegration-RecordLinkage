@@ -13,7 +13,7 @@ def map_columns(schema_path, datasets_folder):
     datasets = []
 
     for dataset_path in dataset_files:
-        dataset_name = dataset_path.split("\\")[-1]
+        dataset_name = dataset_path.split("/")[-1]
         if dataset_name in column_mapping:
             print(f"Processando dataset: {dataset_name}...")
             dataset = pd.read_csv(dataset_path, encoding='latin1', on_bad_lines='skip')
