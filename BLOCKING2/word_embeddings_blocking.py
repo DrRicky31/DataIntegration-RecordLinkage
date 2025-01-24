@@ -2,9 +2,6 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import DBSCAN
 import numpy as np
-from umap import UMAP
-from sklearn.metrics.pairwise import pairwise_distances
-from collections import Counter
 
 # Caricamento del dataset da un file CSV
 input_file = "data_analysis/merged_dataset_with_similarity.csv"  # Sostituisci con il percorso del tuo file
@@ -25,28 +22,14 @@ model = SentenceTransformer('paraphrase-MiniLM-L6-v2')  # Modello di embedding
 embeddings = model.encode(df["name"].astype(str).tolist(), show_progress_bar=True)
 print("Calcolo completato.")
 
-# Riduzione della dimensionalità con UMAP
-print("Riduzione della dimensionalità con UMAP...")
-reducer = UMAP(n_neighbors=15, min_dist=0.1, n_components=2, random_state=42)
-reduced_embeddings = reducer.fit_transform(embeddings)
-print("Riduzione completata.")
-
-# Analisi della distribuzione delle distanze
-print("Calcolo della distribuzione delle distanze...")
-distances = pairwise_distances(reduced_embeddings, metric="euclidean")
-flattened_distances = np.sort(distances, axis=None)
-optimal_eps = np.percentile(flattened_distances, 5)  # 5° percentile come riferimento iniziale
-print(f"Valore suggerito per eps: {optimal_eps:.4f}")
-
-# Clustering con DBSCAN basato su embedding ridotti
+# Clustering con DBSCAN basato su embedding
 print("Esecuzione del clustering con DBSCAN...")
-dbscan = DBSCAN(eps=optimal_eps, min_samples=3, metric="euclidean")
-clusters = dbscan.fit_predict(reduced_embeddings)
+dbscan = DBSCAN(eps=0.3, min_samples=2, metric="cosine")
+clusters = dbscan.fit_predict(embeddings)
 
 # Aggiungi i cluster come chiavi di blocco al DataFrame
 df["cluster"] = clusters
-num_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
-print(f"\nClustering completato. Numero di cluster trovati: {num_clusters}")
+print(f"\nClustering completato. Numero di cluster trovati: {len(set(clusters)) - (1 if -1 in clusters else 0)}")
 
 # Fusione dei record all'interno di ciascun cluster
 def merge_records(group):
@@ -65,6 +48,9 @@ def merge_records(group):
     return pd.Series(merged)
 
 print("Raggruppamento e fusione dei record all'interno dei cluster...")
+
+# La fusione dei cluster deve essere fatta senza rimuovere quelli con un singolo elemento
+# Evitiamo di rimuovere i cluster rumorosi (etichettati come -1)
 merged_df = df.groupby("cluster").apply(merge_records).reset_index(drop=True)
 
 # Mostra un'anteprima del dataset fuso
