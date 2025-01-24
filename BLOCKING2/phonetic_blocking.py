@@ -3,7 +3,7 @@ from metaphone import doublemetaphone
 from rapidfuzz.fuzz import ratio
 
 # Caricamento del dataset da un file CSV
-input_file = "merged_dataset_with_similarity.csv"  # Sostituisci con il percorso del tuo file
+input_file = "data_analysis/merged_dataset_with_similarity.csv"  # Sostituisci con il percorso del tuo file
 output_file = "BLOCKING2/phonetic_merged.csv"
 
 print("Caricamento del dataset...")

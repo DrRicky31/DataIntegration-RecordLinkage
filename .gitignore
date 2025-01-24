@@ -7,5 +7,6 @@ merged_dataset.csv
 merged_dataset_with_similarity.csv
 
 phonetic_merged.csv
+embedding_merged.csv
 
 TODO.txt
