@@ -2,9 +2,9 @@ import pandas as pd
 import recordlinkage
 
 # Carica i dati di blocking
-attribute_based_file = '/home/alessio/Desktop/UNI MAGISTRALE/ESAMI DA FARE/INGEGNERIA DEI DATI/Homework/Hw5_IDD/Hw5_IDD/BLOCKING/attribute_based_blocks.csv'
-similarity_based_file = '/home/alessio/Desktop/UNI MAGISTRALE/ESAMI DA FARE/INGEGNERIA DEI DATI/Homework/Hw5_IDD/Hw5_IDD/BLOCKING/similarity_based_blocks.csv'
-groundtruth_file = '/home/alessio/Desktop/UNI MAGISTRALE/ESAMI DA FARE/INGEGNERIA DEI DATI/Homework/Hw5_IDD/Hw5_IDD/GROUNDTRUTH/top_100_similar_datasets_by_attributes.csv'
+attribute_based_file = 'BLOCKING/attribute_based_blocks.csv'
+similarity_based_file = 'BLOCKING/similarity_based_blocks.csv'
+groundtruth_file = 'GROUNDTRUTH/top_100_similar_datasets_by_attributes.csv'
 
 # Carica i dati dai file CSV
 attribute_based_blocks = pd.read_csv(attribute_based_file)
