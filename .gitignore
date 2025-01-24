@@ -4,3 +4,4 @@ processed_data
 best_model.pth
 
 merged_dataset.csv
+merged_dataset_with_similarity.csv
