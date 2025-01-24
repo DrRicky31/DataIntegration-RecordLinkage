@@ -1,80 +1,59 @@
-Attribute Name,Files
-name,"./extracted_files/output_govuk_bigsize.json, ./extracted_files/hitHorizons_dataset.jsonl, ./extracted_files/DDD-teamblind.com.csv, ./extracted_files/ft.com.json, ./extracted_files/DDD-cbinsight.com.csv, ./extracted_files/disfold.com.json, ./extracted_files/output_globaldata.json, ./extracted_files/valueToday_dataset.jsonl, ./extracted_files/companiesMarketCap_dataset.jsonl"
-city,./extracted_files/DDD-cbinsight.com.csv
-country,"./extracted_files/companiesMarketCap_dataset.jsonl, ./extracted_files/ft.com.json, ./extracted_files/DDD-cbinsight.com.csv"
-industry,"./extracted_files/hitHorizons_dataset.jsonl, ./extracted_files/DDD-teamblind.com.csv, ./extracted_files/ft.com.json, ./extracted_files/DDD-cbinsight.com.csv, ./extracted_files/output_globaldata.json"
-founded,"./extracted_files/DDD-teamblind.com.csv, ./extracted_files/ft.com.json, ./extracted_files/DDD-cbinsight.com.csv"
-rank,./extracted_files/companiesMarketCap_dataset.jsonl
-headquarters,"./extracted_files/disfold.com.json, ./extracted_files/output_globaldata.json"
-address,"./extracted_files/hitHorizons_dataset.jsonl, ./extracted_files/output_globaldata.json"
-id,"./extracted_files/valueToday_dataset.jsonl, ./extracted_files/companiesMarketCap_dataset.jsonl, ./extracted_files/hitHorizons_dataset.jsonl"
-valuation,./extracted_files/DDD-cbinsight.com.csv
-dateJoined,./extracted_files/DDD-cbinsight.com.csv
-investors,./extracted_files/DDD-cbinsight.com.csv
-stage,./extracted_files/DDD-cbinsight.com.csv
-totalRaised,./extracted_files/DDD-cbinsight.com.csv
-RANK,./extracted_files/campaignindia.csv
-BRAND NAME,./extracted_files/campaignindia.csv
-CATEGORY,./extracted_files/campaignindia.csv
-MAIN MARKET,./extracted_files/campaignindia.csv
-2010 RANK,./extracted_files/campaignindia.csv
-locations,./extracted_files/DDD-teamblind.com.csv
-size,./extracted_files/DDD-teamblind.com.csv
-ID azienda,"./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv, ./extracted_files/wissel-activity-ariregister.rik.ee.csv, ./extracted_files/wissel-partners-ariregister.rik.ee.csv"
-Area of Activity,./extracted_files/wissel-activity-ariregister.rik.ee.csv
-EMTAK Code,./extracted_files/wissel-activity-ariregister.rik.ee.csv
-NACE Code,./extracted_files/wissel-activity-ariregister.rik.ee.csv
-Source,./extracted_files/wissel-activity-ariregister.rik.ee.csv
-world_rank,./extracted_files/valueToday_dataset.jsonl
-annual_revenue_in_usd,./extracted_files/valueToday_dataset.jsonl
-annual_net_income_in_usd,./extracted_files/valueToday_dataset.jsonl
-annual_results_for_year_ending,./extracted_files/valueToday_dataset.jsonl
-total_assets_in_usd,./extracted_files/valueToday_dataset.jsonl
-total_liabilities_in_usd,./extracted_files/valueToday_dataset.jsonl
-total_equity_in_usd,./extracted_files/valueToday_dataset.jsonl
-headquarters_region_city,./extracted_files/valueToday_dataset.jsonl
-headquarters_country,./extracted_files/valueToday_dataset.jsonl
-headquarters_sub_region,./extracted_files/valueToday_dataset.jsonl
-headquarters_continent,./extracted_files/valueToday_dataset.jsonl
-company_business,./extracted_files/valueToday_dataset.jsonl
-ceo,"./extracted_files/valueToday_dataset.jsonl, ./extracted_files/disfold.com.json"
-founders,./extracted_files/valueToday_dataset.jsonl
-company_website,./extracted_files/valueToday_dataset.jsonl
-company_number,./extracted_files/output_govuk_bigsize.json
-registered_office_address,./extracted_files/output_govuk_bigsize.json
-company_status,./extracted_files/output_govuk_bigsize.json
-company_type,./extracted_files/output_govuk_bigsize.json
-company_creation_date,./extracted_files/output_govuk_bigsize.json
-nature_of_business,./extracted_files/output_govuk_bigsize.json
-nation,./extracted_files/hitHorizons_dataset.jsonl
-hhid,./extracted_files/hitHorizons_dataset.jsonl
-sic_code,./extracted_files/hitHorizons_dataset.jsonl
-type,./extracted_files/hitHorizons_dataset.jsonl
-est_of_ownership,./extracted_files/hitHorizons_dataset.jsonl
-link,"./extracted_files/disfold.com.json, ./extracted_files/ft.com.json"
-employees,"./extracted_files/disfold.com.json, ./extracted_files/ft.com.json"
-Sales,./extracted_files/MalPatSaj-forbes.com.xls
-Profit,./extracted_files/MalPatSaj-forbes.com.xls
-Assets,./extracted_files/MalPatSaj-forbes.com.xls
-Market Value,./extracted_files/MalPatSaj-forbes.com.xls
-Company,./extracted_files/company_social_urls.csv
-Facebook,./extracted_files/company_social_urls.csv
-Twitter,./extracted_files/company_social_urls.csv
-Instagram,./extracted_files/company_social_urls.csv
-Pinterest,./extracted_files/company_social_urls.csv
-share_price,./extracted_files/companiesMarketCap_dataset.jsonl
-change_1_day,./extracted_files/companiesMarketCap_dataset.jsonl
-change_1_year,./extracted_files/companiesMarketCap_dataset.jsonl
-categories,./extracted_files/companiesMarketCap_dataset.jsonl
-Code,"./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv, ./extracted_files/wissel-aziende-ariregister.rik.ee.csv, ./extracted_files/wissel-partners-ariregister.rik.ee.csv"
-Legal form,./extracted_files/wissel-aziende-ariregister.rik.ee.csv
-Status,./extracted_files/wissel-aziende-ariregister.rik.ee.csv
-Registration Date,./extracted_files/wissel-aziende-ariregister.rik.ee.csv
-Capital,./extracted_files/wissel-aziende-ariregister.rik.ee.csv
-Deletion Date,./extracted_files/wissel-aziende-ariregister.rik.ee.csv
-Participation,./extracted_files/wissel-partners-ariregister.rik.ee.csv
-Contribution,./extracted_files/wissel-partners-ariregister.rik.ee.csv
-Role,./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv
-Start Date,./extracted_files/wissel-rappresentanti-ariregister.rik.ee.csv
-Ownership,./extracted_files/AmbitionBox.csv
-Foundation Year,./extracted_files/AmbitionBox.csv
+Unified Attribute,AmbitionBox.csv,DDD-cbinsight.com.csv,DDD-teamblind.com.csv,MalPatSaj-forbes.com.csv,MalPatSaj-wikipedia.org.csv,campaignindia.csv,companiesMarketCap_dataset.csv,company_social_urls.csv,disfold.com.csv,ft.com.csv,hitHorizons_dataset.csv,output_globaldata.csv,output_govuk_bigsize.csv,valueToday_dataset.csv,wissel-activity-ariregister.rik.ee.csv,wissel-aziende-ariregister.rik.ee.csv,wissel-aziende-info-clipper.com.csv,wissel-partners-ariregister.rik.ee.csv,wissel-rappresentanti-ariregister.rik.ee.csv
+name,Name,name,name,Name,Name,BRAND NAME,name,Company,name,name,name,,name,name,,Name,Name,Name,Name
+tradename,,,,,,,,,,,,,,,,,Trade Name,,
+postalcode,,,,,,,,,,,,,,,,,Postalcode,,
+city,Headquarter,city,locations,,Headquarters,,,,headquarters,,,,,headquarters_region_city,,,City,,
+state,,,,,,,,,,,,,,headquarters_sub_region,,,State,,
+country,,country,,Country,,," country",,,country,nation,,,headquarters_country,,,Country,,
+locationtype,,,,,,,,,,,,,,,,,Location type,,
+valuation,,valuation,,,,,,,,,,,,,,,,,
+datejoined,,dateJoined,,,,,,,,,,,,,,,,,
+industry,Industry,industry,industry,,Industry,CATEGORY,categories,,,industry,industry,industry,nature_of_business,company_business,Area of Activity,,,,
+investors,,investors,,,,,,,,,,,,,,,,,
+founded,Foundation Year,founded,Founded,,Founded,,,,,founded,est_of_ownership,,,,,,,,
+stage,,stage,,,,,,,,,,,,,,,,,
+totalraised,,totalRaised,,,,,,,,,,,,,,,,,
+rank,,,,,,RANK,rank,,,,,,,world_rank,,,,,
+mainmarket,,,,,,MAIN MARKET,,,,,,,,,,,,,
+2010rank,,,,,,2010 RANK,,,,,,,,,,,,,
+address,,,,,,,,,,,address,address,registered_office_address,,,Address,Address Name,,
+website,,,website,,,,,,link,link,,website,,company_website,,URL,URL,,
+marketcap,,,,Market Value,,,market_cap,,market_cap,,,market_cap,,,,Capital,,,
+telephone,,,,,,,,,,,,telephone,,,,,,,
+revenue,,,,,,,,,,revenue,,revenue,,,,,,,
+emtakcode,,,,,,,,,,,,,,,EMTAK Code,,,,
+nacecode,,,,,,,,,,,,,,,NACE Code,,,,
+source,,,,,,,,,,,,,,,Source,,,,
+id,,,,,,,id,,,,id,,company_number,id,ID azienda,ID,,ID azienda,ID azienda
+annualrevenueinusd,,,,,,,,,,,,,,annual_revenue_in_usd,,,,,
+annualnetincomeinusd,,,,,,,,,,,,,,annual_net_income_in_usd,,,,,
+annualresultsforyearending,,,,,,,,,,,,,,annual_results_for_year_ending,,,,,
+totalliabilitiesinusd,,,,,,,,,,,,,,total_liabilities_in_usd,,,,,
+totalequityinusd,,,,,,,,,,,,,,total_equity_in_usd,,,,,
+headquarterscontinent,,,,,,,,,,,,,,headquarters_continent,,,,,
+ceo,,,,,,,,,ceo,,,,,ceo,,,,,
+founders,,,,,,,,,,,,,,founders,,,,,
+companystatus,,,,,,,,,,,,,company_status,,,Status,,,
+companytype,Ownership,,,,,,,,,,,,company_type,,,,,,
+companycreationdate,,,,,,,,,,,,,company_creation_date,,,,,,Start Date
+hhid,,,,,,,,,,,hhid,,,,,,,,
+siccode,,,,,,,,,,,sic_code,,,,,,,,
+type,,,,,,,,,,,type,,,,,,,,
+employees,,,size,,,,,,employees,employees,,number_of_employees,,number_of_employees,,,,,
+sales,,,,Sales,,,,,,,,,,,,,,,
+profit,,,,Profit,,,,,,,,,,,,,,,
+assets,,,,Assets,,,,,,,,,,total_assets_in_usd,,,,,
+facebook,,,,,,,,Facebook,,,,,,,,,,,
+twitter,,,,,,,,Twitter,,,,,,,,,,,
+instagram,,,,,,,,Instagram,,,,,,,,,,,
+pinterest,,,,,,,,Pinterest,,,,,,,,,,,
+shareprice,,,,,,,share_price,,,,,,,,,,,,
+change1day,,,,,,,change_1_day,,,,,,,,,,,,
+change1year,,,,,,,change_1_year,,,,,,,,,,,,
+code,,,,,,,,,,,,,,,,Code,,Code,Code
+legalform,,,,,,,,,,,,,,,,Legal form,,,
+registrationdate,,,,,,,,,,,,,,,,Registration Date,,,
+deletiondate,,,,,,,,,,,,,,,,Deletion Date,,,
+participation,,,,,,,,,,,,,,,,,,Participation,
+contribution,,,,,,,,,,,,,,,,,,Contribution,
+role,,,,,,,,,,,,,,,,,,,Role

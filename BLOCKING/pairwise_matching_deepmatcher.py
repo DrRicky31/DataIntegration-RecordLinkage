@@ -32,9 +32,9 @@ def prepare_deepmatcher_data(attribute_file, similarity_file, groundtruth_file):
         blocks[['id', 'left_Dataset', 'right_Dataset', 'label']].to_csv(output_file, index=False)
 
     # Salva i file per DeepMatcher
-    format_for_deepmatcher(attribute_blocks, 'data/train.csv')
-    format_for_deepmatcher(similarity_blocks, 'data/test.csv')
-    format_for_deepmatcher(groundtruth, 'data/validation.csv')
+    format_for_deepmatcher(attribute_blocks, 'BLOCKING/data/train.csv')
+    format_for_deepmatcher(similarity_blocks, 'BLOCKING/data/test.csv')
+    format_for_deepmatcher(groundtruth, 'BLOCKING/data/validation.csv')
 
 # Percorsi ai file
 attribute_based_file = 'BLOCKING/attribute_based_blocks.csv'

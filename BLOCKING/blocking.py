@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Carica i dati
-schema_file_path = 'MEDIATED_SCHEMA/unified_attribute_mapping.csv'
+schema_file_path = 'MEDIATED_SCHEMA/mediated_schema.csv'
 groundtruth_file_path = 'GROUNDTRUTH/top_100_similar_datasets_by_attributes.csv'
 schema_df = pd.read_csv(schema_file_path)
 groundtruth_df = pd.read_csv(groundtruth_file_path)

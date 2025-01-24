@@ -90,7 +90,7 @@ def consolidate_similar_records(df, similarity_threshold=70):
     return pd.DataFrame(consolidated)
 
 # Percorsi principali
-schema_path = 'MEDIATED_SCHEMA/unified_attribute_mapping.csv'
+schema_path = 'MEDIATED_SCHEMA/mediated_schema.csv'
 datasets_folder = 'extracted_files'
 
 # Esegui la mappatura e unisci i dataset
@@ -101,5 +101,5 @@ merged_dataset = merge_datasets(mapped_datasets)
 final_dataset = consolidate_similar_records(merged_dataset)
 
 # Salva il dataset finale
-final_dataset.to_csv('merged_dataset_with_similarity.csv', index=False)
+final_dataset.to_csv('data_analysis/merged_dataset_with_similarity.csv', index=False)
 print("Merge completato e consolidamento dei record simili. File salvato come 'merged_dataset_with_similarity.csv'.")

@@ -3,7 +3,7 @@ from difflib import SequenceMatcher
 from itertools import combinations
 
 # Load the file
-file_path = 'MEDIATED_SCHEMA/unified_attribute_mapping.csv'
+file_path = 'MEDIATED_SCHEMA/mediated_schema.csv'
 data = pd.read_csv(file_path)
 
 # Exclude the "Unified Attribute" column and work only on source columns
