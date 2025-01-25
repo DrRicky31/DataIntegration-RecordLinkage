@@ -9,4 +9,6 @@ merged_dataset_with_similarity.csv
 phonetic_merged.csv
 embedding_merged.csv
 
+embedding_matching_results.csv
+
 TODO.txt

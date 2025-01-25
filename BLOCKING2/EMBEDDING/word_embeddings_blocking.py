@@ -5,7 +5,7 @@ import numpy as np
 
 # Caricamento del dataset da un file CSV
 input_file = "data_analysis/merged_dataset_with_similarity.csv"  # Sostituisci con il percorso del tuo file
-output_file = "BLOCKING2/embedding_merged.csv"
+output_file = "BLOCKING2/EMBEDDING/embedding_merged.csv"
 
 print("Caricamento del dataset...")
 df = pd.read_csv(input_file)
@@ -35,7 +35,7 @@ print(f"\nClustering completato. Numero di cluster trovati: {len(set(clusters)) 
 def merge_records(group):
     merged = {
         "ids": list(group["id"]) if "id" in group.columns else None,
-        "name": ", ".join(group["name"]),
+        "name": "; ".join(group["name"]),  # Cambiato da ", " a "; "
         "cluster": group["cluster"].iloc[0],
     }
     # Fusione di altre colonne
@@ -44,7 +44,7 @@ def merge_records(group):
             if pd.api.types.is_numeric_dtype(group[col]):
                 merged[col] = group[col].mean()  # Media per numeri
             else:
-                merged[col] = ", ".join(group[col].astype(str).unique())  # Concatenazione unica per stringhe
+                merged[col] = "; ".join(group[col].astype(str).unique())  # Cambiato da ", " a "; "
     return pd.Series(merged)
 
 print("Raggruppamento e fusione dei record all'interno dei cluster...")

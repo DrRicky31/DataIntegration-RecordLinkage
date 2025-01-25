@@ -4,7 +4,7 @@ from rapidfuzz.fuzz import ratio
 
 # Caricamento del dataset da un file CSV
 input_file = "data_analysis/merged_dataset_with_similarity.csv"  # Sostituisci con il percorso del tuo file
-output_file = "BLOCKING2/phonetic_merged.csv"
+output_file = "BLOCKING2/PHONETIC/phonetic_merged.csv"
 
 print("Caricamento del dataset...")
 df = pd.read_csv(input_file)
@@ -30,7 +30,7 @@ print("\nAnteprima dei dati con colonna fonetica aggiunta:")
 print(df.head())
 
 # Funzione per verificare la similarità fonetica
-def are_similar(phonetic1, phonetic2, threshold=95):
+def are_similar(phonetic1, phonetic2, threshold=90):
     if phonetic1 is None or phonetic2 is None:
         return False
     return ratio(phonetic1, phonetic2) >= threshold
@@ -53,7 +53,7 @@ for idx, row in df.iterrows():
     print(f"\nElaborazione gruppo fonetico: {phonetic} ({len(similar_records)} record trovati)")
     merged = {
         "ids": list(similar_records["id"]) if "id" in similar_records.columns else None,
-        "name": ", ".join(similar_records["name"]),
+        "name": "; ".join(similar_records["name"]),
         "phonetic_name": phonetic
     }
     # Fusione di altre colonne
@@ -62,7 +62,7 @@ for idx, row in df.iterrows():
             if pd.api.types.is_numeric_dtype(similar_records[col]):
                 merged[col] = similar_records[col].mean()  # Media per numeri
             else:
-                merged[col] = ", ".join(similar_records[col].astype(str).unique())  # Concatenazione unica per stringhe
+                merged[col] = "; ".join(similar_records[col].astype(str).unique())  # Concatenazione unica per stringhe
     
     # Aggiungi il risultato fuso e segna i phonetic_name come processati
     merged_records.append(merged)
