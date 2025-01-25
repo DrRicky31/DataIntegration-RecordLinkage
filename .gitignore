@@ -10,5 +10,6 @@ phonetic_merged.csv
 embedding_merged.csv
 
 embedding_matching_results.csv
+phonetic_matching_results.csv
 
 TODO.txt
