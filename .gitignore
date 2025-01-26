@@ -12,4 +12,12 @@ embedding_merged.csv
 embedding_matching_results.csv
 phonetic_matching_results.csv
 
+deepmatcher_input.csv
+deepmatcher_results.csv
+test.csv
+train.csv
+validation.csv
+
+*.pth
+
 TODO.txt
