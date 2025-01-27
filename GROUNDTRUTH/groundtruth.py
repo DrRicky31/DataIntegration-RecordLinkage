@@ -21,6 +21,7 @@ def calculate_similarity_by_attributes(column1, column2):
         if val1 or val2:  # Consider only non-empty values
             total_attributes += 1
             if val1 and val2:  # Both values are non-empty
+                total_attributes += 1
                 similar_attributes += 1
 
     similarity_ratio = similar_attributes / total_attributes if total_attributes > 0 else 0
