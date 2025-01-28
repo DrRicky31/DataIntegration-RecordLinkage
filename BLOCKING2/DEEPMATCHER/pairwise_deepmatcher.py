@@ -33,13 +33,13 @@ def evaluate_file(groundtruth, file_to_check, similarity_threshold=0.75):
     for pair, similarity in groundtruth_pairs.items():
         reverse_pair = (pair[1], pair[0])
         if similarity == 1:
-            if (pair in file_to_check_pairs and file_to_check_pairs[pair] > similarity_threshold) or \
-               (reverse_pair in file_to_check_pairs and file_to_check_pairs[reverse_pair] > similarity_threshold):
+            if (pair in file_to_check_pairs) or \
+               (reverse_pair in file_to_check_pairs):
                 valid_contributions += 1
             total_contributions += 1
         elif similarity == 0:
-            if (pair not in file_to_check_pairs or file_to_check_pairs.get(pair, 0) < similarity_threshold) and \
-               (reverse_pair not in file_to_check_pairs or file_to_check_pairs.get(reverse_pair, 0) < similarity_threshold):
+            if (pair not in file_to_check_pairs) and \
+               (reverse_pair not in file_to_check_pairs):
                 valid_contributions += 1
             total_contributions += 1
 
@@ -47,9 +47,12 @@ def evaluate_file(groundtruth, file_to_check, similarity_threshold=0.75):
     return contribution_percentage
 
 # Prepara i dati per DeepMatcher
-def prepare_data_for_deepmatcher(input_path, train_path, validation_path, test_path):
+def prepare_data_for_deepmatcher(input_path, output_path, train_path, test_path, validation_path):
     data = pd.read_csv(input_path)
-    data['name'] = data['name'].fillna('')
+
+    if data['name'].isnull().any():
+        data['name'] = data['name'].fillna('')
+
     data['name_clean'] = data['name'].apply(lambda x: [name.strip().lower() for name in x.split(";")])
     data = data.explode('name_clean')
 
@@ -62,8 +65,9 @@ def prepare_data_for_deepmatcher(input_path, train_path, validation_path, test_p
                     pairs.append({'id': f'{cluster_id}_{name1}_{name2}', 'left_name': name1, 'right_name': name2, 'label': '1'})
                 else:
                     pairs.append({'id': f'{cluster_id}_{name1}_{name2}', 'left_name': name1, 'right_name': name2, 'label': '0'})
-
     pairs_df = pd.DataFrame(pairs)
+    pairs_df.to_csv(output_path, index=False)
+    print(f"File salvato per DeepMatcher in: {output_path}")
 
     # Suddivide i dati in train, validation e test
     train, temp = train_test_split(pairs_df, test_size=0.4, random_state=42)
@@ -75,31 +79,78 @@ def prepare_data_for_deepmatcher(input_path, train_path, validation_path, test_p
 
     print(f"File DeepMatcher salvati: train ({train_path}), validation ({validation_path}), test ({test_path})")
 
+
 # Esegui DeepMatcher
 def run_deepmatcher(train_path, validation_path, test_path, output_path):
     train, validation, test = dm.data.process(path='', train=train_path, validation=validation_path, test=test_path)
 
     model = dm.MatchingModel(attr_summarizer='hybrid')
-    model.run_train(train, validation, best_save_path='best_model.pth', epochs=1)  # Impostato a massimo 3 epoche
+    model.run_train(train, validation, best_save_path='best_model.pth', epochs=5) 
 
     predictions = model.run_prediction(test)
-    predictions.to_csv(output_path, index=False)
+
+    # Prepara il DataFrame per l'output
+    output_df = pd.DataFrame({
+        'Name1': predictions['left_name'],  # Colonna disponibile per il nome a sinistra
+        'Name2': predictions['right_name'],  # Colonna disponibile per il nome a destra
+        'Similarity': predictions['match_score']  # Score di corrispondenza
+    })
+
+    # Salva il risultato in formato CSV
+    output_df.to_csv(output_path, index=False)
     print(f"Predizioni DeepMatcher salvate in: {output_path}")
+
+
+def run_deepmatcher_with_model(test_path, model_path, output_path):
+    # Carica i dati di test non etichettati, disabilitando la cache
+    test = dm.data.process(path='', test=test_path, cache=False)
+    
+    # Carica il modello pre-addestrato
+    model = dm.MatchingModel(attr_summarizer='hybrid')
+    model.load_state(model_path)
+
+    # Esegui le predizioni
+    predictions = model.run_prediction(test, output_attributes=True)
+
+    # Debug: Stampa le colonne di `predictions`
+    print("Colonne disponibili in predictions:", predictions.columns)
+
+    # Prepara il DataFrame per l'output
+    output_df = pd.DataFrame({
+        'Name1': predictions['left_name'],  # Colonna disponibile per il nome a sinistra
+        'Name2': predictions['right_name'],  # Colonna disponibile per il nome a destra
+        'Similarity': predictions['match_score']  # Score di corrispondenza
+    })
+
+    # Salva il risultato in formato CSV
+    output_df.to_csv(output_path, index=False)
+    print(f"Predizioni DeepMatcher salvate in: {output_path}")
+
 
 # Funzione principale
 def main():
     # Percorsi
     groundtruth_path = 'BLOCKING2/GROUNDTRUTH/groundtruth.csv'
+
     embedding_file_path = 'BLOCKING2/EMBEDDING/embedding_merged.csv'
-    train_path = 'BLOCKING2/EMBEDDING/train.csv'
-    validation_path = 'BLOCKING2/EMBEDDING/validation.csv'
-    test_path = 'BLOCKING2/EMBEDDING/test.csv'
-    deepmatcher_output_path = 'BLOCKING2/EMBEDDING/deepmatcher_results.csv'
+    phonetic_file_path='BLOCKING2/PHONETIC/phonetic_merged.csv'
+
+    embedding_input='BLOCKING2/DEEPMATCHER/embedding_input.csv'
+    phonetic_input='BLOCKING2/DEEPMATCHER/phonetic_input.csv'
+
+    train_path = 'BLOCKING2/DEEPMATCHER/train.csv'
+    validation_path = 'BLOCKING2/DEEPMATCHER/validation.csv'
+    test_path = 'BLOCKING2/DEEPMATCHER/test.csv'
+
+    #deepmatcher_output_path = 'BLOCKING2/PHONETIC/deepmatcher_ph_results.csv'
+    deepmatcher_output_path = 'BLOCKING2/EMBEDDING/deepmatcher_emb_results.csv'
 
     # Prepara i dati per DeepMatcher
-    prepare_data_for_deepmatcher(embedding_file_path, train_path, validation_path, test_path)
+    prepare_data_for_deepmatcher(embedding_file_path, embedding_input, train_path, test_path, validation_path)
 
     # Esegui DeepMatcher
+    #run_deepmatcher_with_model(phonetic_input, model_path='best_model.pth', deepmatcher_output_path)
+
     run_deepmatcher(train_path, validation_path, test_path, deepmatcher_output_path)
 
     # Valuta i risultati
