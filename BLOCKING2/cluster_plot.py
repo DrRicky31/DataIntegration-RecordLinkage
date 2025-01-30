@@ -5,6 +5,7 @@ import seaborn as sns
 from sentence_transformers import SentenceTransformer
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
+import matplotlib.lines as mlines
 
 # Carica il dataset
 file_path = "BLOCKING2/EMBEDDING/embedding_merged.csv"  # Modifica con il percorso corretto
@@ -20,6 +21,9 @@ df["size"] = df["name"].apply(len)
 # Ordina i cluster per grandezza e seleziona quelli dalla posizione 51 alla 80
 top_clusters = df.groupby("cluster").sum().nlargest(80, "size").reset_index()
 df_selected = df[df["cluster"].isin(top_clusters["cluster"].iloc[50:80])]
+
+# Filtra i cluster che contengono "\n" nei nomi
+df_selected = df_selected[~df_selected["name"].apply(lambda x: any('\n' in name for name in x))]
 
 # Creiamo una lista di parole per ogni cluster
 words = list(set([name for names in df_selected["name"] for name in names]))
@@ -59,16 +63,27 @@ cluster_names = {cluster_id: next(iter(df_selected[df_selected["cluster"] == clu
                  for cluster_id in df_selected["cluster"].unique()}
 
 # Visualizzazione con Seaborn
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(16, 9))  # Impostato per Full HD (16:9)
 sns.scatterplot(data=df_plot, x="x", y="y", hue="cluster", palette="tab10", legend=False, alpha=0.7)
 
-# Aggiungi un solo nome per cluster (etichetta)
+# Crea la legenda personalizzata
+handles = []
 for cluster_id, name in cluster_names.items():
-    cluster_points = df_plot[df_plot["cluster"] == cluster_id]
-    plt.text(cluster_points["x"].mean(), cluster_points["y"].mean(), name, fontsize=10, ha="center", va="center")
+    # Crea un marker per ogni cluster
+    handle = mlines.Line2D([], [], marker='o', color='w', markerfacecolor=sns.color_palette("tab10")[cluster_id % 10],
+                           markersize=10, label=name)
+    handles.append(handle)
 
-# Non aggiungere etichette per i nodi
+# Aggiungi la legenda alla figura con più spazio
+plt.legend(handles=handles, title="Cluster", loc="center left", bbox_to_anchor=(1.05, 0.5))
+
+# Non aggiungere etichette per i nodi nel grafico
 plt.title("Clusterizzazione dei Word Embeddings con t-SNE", fontsize=14)
 plt.xlabel("t-SNE Dimension 1")
 plt.ylabel("t-SNE Dimension 2")
+
+# Salva l'immagine in alta qualità Full HD (1920x1080) con 300 dpi
+plt.savefig("clusterizzazione_embeddings_fullHD.png", dpi=300, bbox_inches='tight')
+
+# Mostra la figura
 plt.show()
