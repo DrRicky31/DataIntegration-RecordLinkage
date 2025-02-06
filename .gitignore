@@ -14,9 +14,12 @@ phonetic_matching_results.csv
 
 deepmatcher_input.csv
 deepmatcher_results.csv
+embedding_input.csv
+phonetic_input.csv
 test.csv
 train.csv
 validation.csv
+deepmatcher_emb_results.csv
 
 *.pth
 
